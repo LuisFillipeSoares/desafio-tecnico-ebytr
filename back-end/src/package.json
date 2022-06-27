@@ -1,7 +1,7 @@
 {
   "name": "sd-0x-store-manager",
   "version": "1.0.0",
-  "description": "Simple CRUD to sales and products",
+  "description": "Simple CRUD to do list",
   "main": "index.js",
   "scripts": {
     "posttest": "node ./test/restoreDb.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tryber/sd-02-project-store-manager.git"
+    "url": "git+https://github.com/LuisFillipeSoares/desafio-tecnico-ebytr.git"
   },
-  "author": "",
+  "author": "Luís Fillipe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tryber/sd-02-project-store-manager/issues"
   },
-  "homepage": "https://github.com/tryber/sd-02-project-store-manager#readme",
+  "homepage": "https://github.com/LuisFillipeSoares/desafio-tecnico-ebytr/blob/fba797c87ef1daeccaa11cadff7c6abc26b4369c/README.md",
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "body-parser": "^1.19.0",
