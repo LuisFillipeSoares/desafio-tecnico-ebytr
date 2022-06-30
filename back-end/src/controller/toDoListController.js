@@ -2,6 +2,7 @@ const toDoListService = require('../service/toDoListService');
 
 const getAll = async (_req, res, next) => {
   try {
+    console.log("entrou no controller")
     const allList = await toDoListService.getAll();
     return res.status(200).json(allList);
   } catch (erro) {
@@ -21,6 +22,7 @@ const getById = async (req, res, next) => {
 };
 
 const registerNew = async (req, res, next) => {
+  console.log("entrou na controller no metodo new")
   try {
     const { name } = req.body;
     const product = await toDoListService.newTarefa(name);
