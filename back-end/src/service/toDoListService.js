@@ -1,7 +1,8 @@
 const toDoListModel = require('../model/toDoListModel');
-const error = require('../utils/error');
+const error = require('../utils/erro');
 
 const getAll = async () => {
+  console.log("entrou no service")
   const result = await toDoListModel.getAll();
   return result;
 };
@@ -25,7 +26,8 @@ const duplicate = async (name) => {
 };
 
 const newTarefa = async (name) => {
-  if (await duplicate(name)) throw error.throwError(409, 'A tarefa já existe');
+  console.log("entrou na service no metodo new")
+  // if (await duplicate(name)) throw error.throwError(409, 'A tarefa já existe');
   const product = await toDoListModel.newTarefa(name);
   return product;
 };

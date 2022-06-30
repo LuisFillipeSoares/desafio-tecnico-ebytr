@@ -1,6 +1,7 @@
 const connection = require('./connection');
 
 const getAll = async () => {
+  console.log("entrou na model")
   const [result] = await connection.execute('SELECT * FROM ToDoList.tarefas ORDER BY id');
   return result;
 };
@@ -18,6 +19,7 @@ const getByname = async (name) => {
 };
 
 const newTarefa = async (name) => {
+  console.log("entrou na model no metodo new")
   const query = 'INSERT INTO ToDoList.tarefas (name) VALUES (?)';
   const [result] = await connection.execute(query, [name]);
   const tarefa = {
