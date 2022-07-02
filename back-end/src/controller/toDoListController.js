@@ -24,8 +24,8 @@ const getById = async (req, res, next) => {
 const registerNew = async (req, res, next) => {
   console.log("entrou na controller no metodo new")
   try {
-    const { name } = req.body;
-    const product = await toDoListService.newTarefa(name);
+    const { name, status } = req.body;
+    const product = await toDoListService.newTarefa(name, status);
     return res.status(201).json(product);
   } catch ({ code, message }) {
     res.status(code).json({ message });

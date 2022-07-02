@@ -18,10 +18,10 @@ const getByname = async (name) => {
   return result;
 };
 
-const newTarefa = async (name) => {
+const newTarefa = async (name, status) => {
   console.log("entrou na model no metodo new")
-  const query = 'INSERT INTO ToDoList.tarefas (name) VALUES (?)';
-  const [result] = await connection.execute(query, [name]);
+  const query = 'INSERT INTO ToDoList.tarefas (name, status) VALUES (?, ?)';
+  const [result] = await connection.execute(query, [name, status]);
   const tarefa = {
     id: result.insertId,
     name,
